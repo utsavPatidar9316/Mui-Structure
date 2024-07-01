@@ -1,11 +1,16 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import ThemeProvider from "./../src/theme";
 import CommonButton from "./component/Button";
 function App() {
+  const theme = useTheme();
   return (
     <ThemeProvider>
       <Box>Hello</Box>
-      <div style={{ color: "black" }}>Hello World</div>
+      <div
+        style={{ color: "black", background: theme.palette.background.neutral }}
+      >
+        Hello World
+      </div>
       <CommonButton />
     </ThemeProvider>
   );
